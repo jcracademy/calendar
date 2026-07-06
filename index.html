@@ -16,14 +16,15 @@
             /* কালার প্যালেট */
             --clr-normal-class: #f9f9f9; 
             --clr-selected-class: #2ecc71; /* সিলেক্টেড বিষয়ের ক্লাস ডে (গাঢ় সবুজ) */
-            --clr-weekend: #f1f2f6;
+            --clr-weekend: #989ca860;
             --clr-weekend-txt: #e84118;
-            --clr-ramadan: #d1f2eb; 
-            --clr-summer: #fef9e7;  
-            --clr-winter: #ebf5fb;  
-            --clr-exam: #fadbd8;    
-            --clr-puja: #f5eef8;    
-            --clr-boishakh: #fbeee6; 
+            --clr-ramadan: #97decf8d; 
+            --clr-summer: #f3b59dc9;  
+            --clr-winter: #92b1e8c2;  
+            --clr-exam: #efeb91b8;    
+            --clr-puja: #c58bdd84;    
+            --clr-boishakh: #c4eea2; 
+             --clr-other: #a4a6caaa;
         }
 
         body { 
@@ -136,6 +137,7 @@
         .exam { background-color: var(--clr-exam) !important; color: #cb4335; border: 1.5px dashed #ec7063; }
         .boishakh { background-color: #fbeee6 !important; color: #b03a2e !important; border: 1px solid #e59866; }
         .puja { background-color: var(--clr-puja) !important; color: #7d3c98; border: 1px solid #d7bde2; }
+        .other{background-color: var(--clr-other) !important; color: #4834c9; border: 1px solid #28be35; }
 
         .day[title]:hover::after {
             content: attr(title);
@@ -175,8 +177,8 @@
    <div class="info" style="display: flex; justify-content: center; color: #9b0505; background-color: rgb(238, 235, 41);">Website টি under development এ রয়েছে। আপনার বিষয়ের জন্য Jiten Sir এর সাথে কথা বলুন...</div> 
     <div class="legend">
         <div class="box"><span style="background: var(--clr-selected-class)"></span>নির্বাচিত বিষয়ের ক্লাস ডে</div>
-        <div class="box"><span style="background: var(--clr-normal-class); border: 1px solid #ccc"></span>অন্যান্য সাধারণ ক্লাস ডে</div>
-        <div class="box"><span style="background: var(--clr-weekend-txt)"></span>শুক্র-শনি (সাপ্তাহিক ছুটি)</div>
+        <div class="box"><span style="background: var(--clr-normal-class); border: 1px solid #ccc"></span>ক্লাস ডে</div>
+        <div class="box"><span style="background: var(--clr-weekend-txt)"></span>সাপ্তাহিক ছুটি</div>
         <div class="box"><span style="background: #a2d9ce"></span>রমজান ও ঈদ</div>
         <div class="box"><span style="background: #f9e79f"></span>গ্রীষ্মকালীন ছুটি</div>
         <div class="box"><span style="background: #aed6f1"></span>শীতকালীন ছুটি</div>
@@ -294,14 +296,14 @@
     }
 
     // --- ছুটির ডাটা ইনপুট ---
-    addHolidayRange("2026-01-17", "2026-01-17", "puja", "শবে মেরাজ"); 
-    addHolidayRange("2026-02-04", "2026-02-05", "puja", "শবে বরাত"); 
-    addHolidayRange("2026-02-15", "2026-03-15", "exam", "বোর্ড পরীক্ষা চলাকালীন ছুটি"); 
-    addHolidayRange("2026-03-18", "2026-04-05", "ramadan", "রমজান ও ঈদুল ফিতর ছুটি"); 
-    addHolidayRange("2026-04-14", "2026-04-14", "boishakh", "পহেলা বৈশাখ"); 
-    addHolidayRange("2026-05-01", "2026-05-01", "puja", "মে দিবস"); 
-    addHolidayRange("2026-05-24", "2026-06-04", "summer", "গ্রীষ্মকালীন ছুটি"); 
-    addHolidayRange("2026-10-15", "2026-10-22", "puja", "দুর্গাপূজা ও লক্ষ্মীপূজা"); 
+    addHolidayRange("2026-02-04", "2026-02-04", "puja", "শবে বরাত"); 
+    addHolidayRange("2026-02-05", "2026-02-05", "other", "সংরক্ষিত ছুটি");  
+    addHolidayRange("2026-02-11", "2026-02-12", "other", "নির্বাচন"); 
+    addHolidayRange("2026-02-15", "2026-02-15", "puja", "শিবরাত্রী পূজা"); 
+    addHolidayRange("2026-02-19", "2026-03-26", "ramadan", "রমজান ও ঈদের ছুটি"); 
+    addHolidayRange("2026-04-05", "2026-04-05", "puja", "ইস্টার সানডে"); 
+    addHolidayRange("2026-04-12", "2026-04-14", "boishakh", "বৈশাবি ও পহেলা বৈশাখ"); 
+    addHolidayRange("2026-05-14", "2026-06-04", "summer", "SSC Exam & Summer vacation"); 
     addHolidayRange("2026-12-20", "2026-12-31", "winter", "শীতকালীন ছুটি");
 
     // ১. বিষয়ের ড্রপডাউন ডাইনামিকালি পরিবর্তন করার ফাংশন
